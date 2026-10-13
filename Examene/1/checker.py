@@ -93,6 +93,12 @@ def scan_sites():
             bad.append(r)
     return good, len(good), len(bad)
 
+a, b, c = scan_sites()
+
+print(a)
+print(f"Reusite: {b}")
+print(f"Esuate: {c}")
+
 
 def check_headers(url):
     """Returnează un dicționar cu: present, missing, score."""
@@ -102,4 +108,3 @@ def check_headers(url):
 def retry_check(url, attempts=3):
     """Încearcă de cel mult `attempts` ori; returnează un dicționar cu: status, attempts."""
     pass
-
